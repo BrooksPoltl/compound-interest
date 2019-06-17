@@ -1,10 +1,10 @@
-module.exports.compound = compound = (initial, amount, years,interest, period = 1) =>{
+module.exports= compound = (initial, amount, years,interest, period = 1) =>{
     initial = Number(initial);
     amount = Number(amount);
     years = Number(years);
     interest = Number(interest);
     period = Number(period);
-    
+
     const rate = interest/period;
     const compounds = years * period;
     let result
@@ -12,7 +12,7 @@ module.exports.compound = compound = (initial, amount, years,interest, period = 
     let totalFromAnnuity;
     let principal = [initial]
     let int = [0]
-    let total = [inital]
+    let total = [initial]
     for(let i = 1; i< years+1; i++){
         // What is current value of initial investment
         totalFromPrincipal = initial*(1+rate)**(i*period);
@@ -22,16 +22,16 @@ module.exports.compound = compound = (initial, amount, years,interest, period = 
         totalFromAnnuity = totalFromAnnuity*amount;
 
         let totalForYear = totalFromAnnuity + totalFromPrincipal;
-        total.push(totalForYear);
+        total.push(Number(totalForYear.toFixed(2)));
 
         // total amount of contributed capital 
-        let contribution = amount*i + initial;
-        principal.push(contribution);
+        let contribution = amount*i*period + initial;
+        principal.push(Number(contribution.toFixed(2)));
 
         let intAmt = totalForYear - contribution;
-        int.push(intAmt);
-        if(i == years-1){
-            result = totalForYear;
+        int.push(Number(intAmt.toFixed(2)));
+        if(i == years){
+            result = Number(totalForYear.toFixed(2));
         }
     }
     return {result: result, principal: principal, interest: int, total: total}
