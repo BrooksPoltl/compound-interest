@@ -1,4 +1,10 @@
 module.exports.compound = compound = (initial, amount, years,interest, period = 1) =>{
+    initial = Number(initial);
+    amount = Number(amount);
+    years = Number(years);
+    interest = Number(interest);
+    period = Number(period);
+    
     const rate = interest/period;
     const compounds = years * period;
     let result
