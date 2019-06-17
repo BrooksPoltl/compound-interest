@@ -7,7 +7,7 @@ module.exports.compound = compound = (initial, amount, years,interest, period = 
     let principal = [initial]
     let int = [0]
     let total = [inital]
-    for(let i = 0; i< years; i++){
+    for(let i = 1; i< years+1; i++){
         // What is current value of initial investment
         totalFromPrincipal = initial*(1+rate)**(i*period);
         // what is current value factor of the annuity
