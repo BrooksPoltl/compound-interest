@@ -1,0 +1,19 @@
+{
+  "name": "compound-interest-calc",
+  "version": "1.0.0",
+  "description": "Package for calculating compound interest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrooksPoltl/compound-interest.git"
+  },
+  "author": "Brooks Poltl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrooksPoltl/compound-interest/issues"
+  },
+  "homepage": "https://github.com/BrooksPoltl/compound-interest#readme"
+}
