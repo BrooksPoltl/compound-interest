@@ -6,7 +6,6 @@ module.exports= compound = (initial, amount, years,interest, period = 1) =>{
     period = Number(period);
 
     const rate = interest/period;
-    const compounds = years * period;
     let result
     let totalFromPrincipal;
     let totalFromAnnuity;

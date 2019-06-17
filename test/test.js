@@ -20,6 +20,7 @@ describe('Testing Compound interest', function() {
   });
   describe('period = 12 initial = 0', function() {
     const result = compound(0,100,5,.1,12)
+    console.log(result)
     it('should return correct result', function() {
         assert.equal(7743.71,result.result);
     });
