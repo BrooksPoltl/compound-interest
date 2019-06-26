@@ -1,5 +1,6 @@
 # compound-interest-calc
-
+##URL
+`https://www.npmjs.com/package/compound-interest-calc`
 ## Getting Started
  `npm install compound-interest-calc`
  
