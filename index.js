@@ -12,6 +12,18 @@ module.exports= compound = (initial, amount, years,interest, period = 1) =>{
     let principal = [initial]
     let int = [0]
     let total = [initial]
+    
+    if(years === 0){
+        result = Number(initial.toFixed(2));
+        return {result: result, principal: principal, interest: int, total: total};
+    }
+
+    if (rate === 0) {
+        result = initial + (amount * years);
+        result = Number(result.toFixed(2));
+        return {result: result, principal: principal, interest: int, total: total}
+    }    
+    
     for(let i = 1; i< years+1; i++){
         // What is current value of initial investment
         totalFromPrincipal = initial*(1+rate)**(i*period);
