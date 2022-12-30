@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/BrooksPoltl/compound-interest#readme",
   "devDependencies": {
-    "mocha": "^6.1.4"
+    "mocha": "^10.2.0"
   }
 }
